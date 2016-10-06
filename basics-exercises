@@ -1,0 +1,40 @@
+
+// Write a function that receives an array of names and returns them in a string with , between them. 
+//The final two must be separated by and.
+
+function C_String(arrayOfNames){
+
+	var total = arrayOfNames[0];
+
+	for (i = 1; i < arrayOfNames.length-1; i = i + 1) {
+    
+    	total = total + ", " + arrayOfNames[i];
+	}
+
+	total = total + " and " + arrayOfNames[arrayOfNames.length-1] + ".";	
+	return total;
+}
+
+
+var arrayOfNames = ["Estrella", "David", "Juan", "Paco"];
+
+console.log(C_String(arrayOfNames));
+
+
+// Write a function that receives an object and returns an array of its values.
+
+function C_Array(objeto) {
+	
+	var total = [];
+	var index = 0;
+
+	for (key in objeto) {
+    	total[index]= objeto[key];
+    	index ++;
+	}
+
+	return total;
+}
+
+var obj = {name: "David", edad: 24, pais: "ESP"}
+console.log(C_Array(obj));
